@@ -58,8 +58,8 @@ p {
 
 .bot {
     margin-top: 1em;
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template: "a b" "c d" / 1fr 1fr;
     border-bottom: 1px solid hsl(40, 50%, 60%);
     padding-bottom: 0.5em;
 }
@@ -81,7 +81,18 @@ p {
 }
 
 .movies {
+    grid-area: c;
     margin-right: 1em;
+}
+
+#movies { grid-area: a;}
+#awards { grid-area: b;}
+.awards { grid-area: d;}
+
+
+h2 {
+    text-align: center;
+    padding-bottom: 0.5em;
 }
 
 h3 {
@@ -92,4 +103,8 @@ h3 {
 li {
     padding: 0.3em;
     font-size: 18px;
+}
+
+.bottomP {
+    margin-top: 1em;
 }
